@@ -110,9 +110,9 @@
 
   <script type="text/javascript">
     // var clientId = 'xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com';
-    var clientId = '805411452796-aqflhdm6roh959majknfe4vjaa0q0ngp.apps.googleusercontent.com';
+    var clientId = '218212122659-5v6mgl1br4d6r70dleu3p2tektej8fi0.apps.googleusercontent.com';
     // var apiKey = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-    var apiKey = 'O-jgc2zQrG3gEHXaTOiZ48Dg'
+    var apiKey = 'c-yspxmKq2IpyaEUrKPieAZg'
     var scopes =
     'https://www.googleapis.com/auth/gmail.readonly '+
     'https://www.googleapis.com/auth/gmail.send';
@@ -159,6 +159,7 @@
     }
 
     function displayInbox() {
+      gapi.client.setApiKey(apiKey);
       var request = gapi.client.gmail.users.messages.list({
         'userId': 'me',
         'labelIds': 'INBOX',
